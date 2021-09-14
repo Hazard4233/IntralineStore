@@ -1,0 +1,15 @@
+@tailwind base;
+@import './base.css';
+
+@tailwind components;
+@import './components.css';
+
+@tailwind utilities;
+
+@font-face {
+    font-family: ttcommon_font;
+    src: url('./fonts/TTCommons/TTCommons-Regular.otf');
+}
+.ttcommon_font {
+    font-family: ttcommon_font;
+}
