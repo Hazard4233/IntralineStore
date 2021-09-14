@@ -44,6 +44,18 @@ module.exports = {
         blue: 'var(--blue)',
         green: 'var(--green)',
         red: 'var(--red)',
+
+        c_00090D: '#00090D',
+        c_00080D: '#00080D',
+        c_8D97BC: '#8D97BC',
+        c_52B5D3: '#52B5D3',
+        c_87C1B9: '#87C1B9',
+        c_99CEE0: '#99CEE0',
+        c_F5DBDD: '#F5DBDD',
+        c_CCE7EF: '#CCE7EF',
+        c_C6CBDD: '#C6CBDD',
+        c_C3E0DC: '#C3E0DC',
+        c_E5E5E5: '#E5E5E5'
       },
       textColor: {
         base: 'var(--text-base)',

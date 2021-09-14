@@ -13,3 +13,6 @@
 .ttcommon_font {
     font-family: ttcommon_font;
 }
+button:focus, input:focus, select:focus {
+    outline: none;
+}

@@ -53,12 +53,12 @@ const Layout: FC<Props> = ({ children, pageProps }) => {
   } = useUI()
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
-
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
-        <Navbar className="fixed top-0 left-0 bg-transparent"/>
+        <Navbar c_name="bg-transparent"/>
         <main className="fit">{children}</main>
+        
         <Footer pages={pageProps.pages} />
 
         <Modal open={displayModal} onClose={closeModal}>

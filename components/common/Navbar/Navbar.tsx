@@ -6,7 +6,10 @@ import { Searchbar, UserNav } from '@components/common'
 import cn from 'classnames'
 import throttle from 'lodash.throttle'
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  c_name: string
+}
+const Navbar: FC<{c_name: string}> = ({c_name}) => {
   const [hasScrolled, setHasScrolled] = useState(false)
 
   useEffect(() => {
@@ -24,7 +27,7 @@ const Navbar: FC = () => {
   }, [])
 
   return (
-    <div className={cn(s.root, { 'shadow-magical': hasScrolled })}>
+    <div className={cn(s.root, { 'shadow-magical': hasScrolled }) + ' ' + c_name}>
       <Container>
         <div className="">
           <div className="flex items-center">
