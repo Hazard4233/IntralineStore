@@ -16,6 +16,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 SwiperCore.use([Navigation, Pagination])
 
+import { RatingView } from 'react-simple-star-rating'
+
 // export async function getStaticProps({
 //   preview,
 //   locale,
@@ -50,6 +52,36 @@ const renderCarouselItems = () => {
                   <img className="mx-auto" src="../assets/img/product1.png" alt="" />
                 </div>
                 <div className="uppercase text-center text-color_1 font-bold text-2xl" style={{letterSpacing: 0.1 + 'em'}}>DERMAL FILLERS</div>
+            </div>
+          </SwiperSlide>
+  })
+}
+
+const renderProfileImgCarouselItems = () => {
+  return ["http://demos.thementic.com/wordpress/WC01/WC010007/wp-content/uploads/2019/02/t3.jpg",
+          "https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/3.JPG",
+          "https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/9.JPG",
+          "https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/1.jpg",
+          "https://monteluke.com.au/wp-content/gallery/linkedin-profile-pictures/34268-MLS-Serene-Zhuang-007flin.jpg"].map(item => {
+    return <SwiperSlide>
+            <div className="">
+                <div className="flex">
+                  <img className="mx-auto rounded-full opacity-75" src={item} width={90} height={90} alt="" />
+                </div>
+            </div>
+          </SwiperSlide>
+  })
+}
+
+const renderProfileDetailCarouselItems = () => {
+  return [0, 1, 2, 3, 4].map(item => {
+    return <SwiperSlide>
+            <div className="">
+                <div className="text-sm text-center" style={{lineHeight: 17 + 'px'}}>DR TUKBA YALCIN  |  DIRECTOR LUMIERE AESTHETICS</div>
+                <div className="flex justify-center mt-7">
+                  <RatingView ratingValue={3} size={30} className="foo" fillColor="#87C1B9" emptyColor="rgba(135, 193, 185, 0.3)"/>
+                </div>
+                <p className="text-sm text-center mt-7 mx-auto" style={{maxWidth: 426 + 'px'}}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
             </div>
           </SwiperSlide>
   })
@@ -130,21 +162,29 @@ export default function Home({
       
       {/* our category part */}
       <div className="mt-10 ml-60">
-        <Swiper 
+        <Swiper
+          className="category_carousel"
           spaceBetween={20} 
           slidesPerView={4} 
           modules={[Navigation, Pagination, A11y]}
           pagination={{
-            // el: '.my-custom-pagination-div',
+            el: '.category-pagination-div',
             clickable: true,
           }}
-          navigation={true}>
+          navigation= {{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}>
           {renderCarouselItems()}
         </Swiper>
         
       </div>
-      <div className="mt-10 flex items-center">
-        {/* <div className="my-custom-pagination-div flex justify-center"></div> */}
+      <div className="mt-10 flex items-center relative mx-60">
+        <div className="swiper-button-prev absolute"></div>
+        <div className="swiper-button-next absolute"></div>
+        <div className="category-pagination-div flex justify-center"></div>
       </div>
       
 
@@ -178,21 +218,56 @@ export default function Home({
         </div>
         <div className="mt-10">
           <Swiper 
+            className="feature_carousel"
             // spaceBetween={20} 
             slidesPerView={5} 
             modules={[Navigation, Pagination, A11y]}
             pagination={{
+              el: '.feature-custom-pagination-div',
               clickable: true,
             }}
-            navigation={true}>
+            navigation= {{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}>
             {renderCarouselItems()}
           </Swiper>
+        </div>
+        <div className="mt-10 flex items-center relative mx-44">
+          <div className="swiper-button-prev absolute"></div>
+          <div className="swiper-button-next absolute"></div>
+          <div className="feature-custom-pagination-div flex justify-center"></div>
         </div>
       </div>
 
       {/* Reviews part */}
       <div className="py-24 bg-white">
         <div className=" text-c_00080D font-bold text-4xl text-center" style={{lineHeight: 26 + 'px'}}>Intraline Reviews.</div>
+        <div className="mx-auto mt-10 w-96">
+          <Swiper 
+            className="profile-img-carousel"
+            spaceBetween={0} 
+            slidesPerView={3} 
+            modules={[Navigation, Pagination, A11y]}>
+            {renderProfileImgCarouselItems()}
+          </Swiper>
+        </div>
+        <div className="mx-auto mt-10" style={{maxWidth: 1094 + 'px'}}>
+          <Swiper 
+            className="profile-img-carousel" 
+            slidesPerView={1} 
+            modules={[Navigation, Pagination, A11y]}
+            pagination={{
+              el: '.profile-custom-pagination-div',
+              clickable: true,
+            }}
+            navigation= {true}>
+            {renderProfileDetailCarouselItems()}
+          </Swiper>
+        </div>
+        <div className="mt-10 flex items-center relative mx-44">
+          <div className="profile-custom-pagination-div flex justify-center"></div>
+        </div>
       </div>
 
       {/* FAQ part */}

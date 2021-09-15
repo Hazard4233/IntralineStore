@@ -6321,7 +6321,7 @@
     "minimist" "^1.2.0"
     "strip-json-comments" "~2.0.1"
 
-"react-dom@^16.0.0 || ^17.0.0", "react-dom@^16.13.1", "react-dom@^16.14.0", "react-dom@^16.6.0 || ^17", "react-dom@^16.7.0", "react-dom@^16.8.0", "react-dom@^16.9.0 || ^17", "react-dom@>=15.3.2":
+"react-dom@^16.0.0 || ^17.0.0", "react-dom@^16.13.1", "react-dom@^16.14.0", "react-dom@^16.6.0 || ^17", "react-dom@^16.7.0", "react-dom@^16.8.0", "react-dom@^16.9.0 || ^17", "react-dom@>=15.3.2", "react-dom@>=16.8.0":
   "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
   "version" "16.14.0"
@@ -6346,12 +6346,17 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
+"react-simple-star-rating@^3.0.0":
+  "integrity" "sha512-kxl9ucQTr1TzXGT/klBe7EMqCN9uuRoSlZqKCr9HMMriEY8rB/VwABtwELYhSClhkE0LIRpWw12EAG9hq5DOSg=="
+  "resolved" "https://registry.npmjs.org/react-simple-star-rating/-/react-simple-star-rating-3.0.0.tgz"
+  "version" "3.0.0"
+
 "react-ticker@^1.2.2":
   "integrity" "sha512-PXUujoPJvajxwOfosuuujlrBUrjgGp4FB4haWFOI25ujhMppW4SuLkiOdQ9AylrWN3yTHWdk2kbQWe3n9SjFGA=="
   "resolved" "https://registry.npmjs.org/react-ticker/-/react-ticker-1.2.2.tgz"
   "version" "1.2.2"
 
-"react@^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@^16.13.1", "react@^16.14.0", "react@^16.6.0 || ^17", "react@^16.7.0", "react@^16.8.0", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@>=15.3.2", "react@15.x.x || 16.x.x || 17.x.x":
+"react@^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@^16.13.1", "react@^16.14.0", "react@^16.6.0 || ^17", "react@^16.7.0", "react@^16.8.0", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@>=15.3.2", "react@>=16.8.0", "react@15.x.x || 16.x.x || 17.x.x":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"

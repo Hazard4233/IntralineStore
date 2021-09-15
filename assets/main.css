@@ -16,3 +16,33 @@
 button:focus, input:focus, select:focus {
     outline: none;
 }
+
+.swiper-button-next, .swiper-button-prev {
+    width: 32px !important;
+}
+.swiper-button-next:after {
+    width: 32px;
+    height: 32px;
+    font-size: 11px !important;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-button-prev:after {
+    width: 32px;
+    height: 32px;
+    font-size: 11px !important;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination-bullet-active {
+    background-color: black;
+}
+
