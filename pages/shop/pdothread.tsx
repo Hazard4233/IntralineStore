@@ -79,8 +79,8 @@ export default function DemeralFiller() {
             <div className="relative bg-c_CCE7EF w-full px-15 pb-32 flex flex-col" style={{height: 900 + 'px'}}>
                 <div className="flex my-auto w-full">
                     <div className="w-1/2">
-                        <div className="s-p-title ttcommon_font_thin font-semibold">Dermal</div>
-                        <div className="s-p-title ttcommon_font_bold" >Fillers</div>
+                        <div className="s-p-title ttcommon_font_thin font-semibold">PDO</div>
+                        <div className="s-p-title ttcommon_font_bold" >Threads</div>
                     </div>
                     <div className="w-1/2 text-4xl ttcommon_font_thin" style={{maxWidth: 427 + 'px'}}>
                         Carefully developed after years of research, Intraline's line up of six dermal fillers are CE marked and designed to treat all areas.
@@ -91,34 +91,40 @@ export default function DemeralFiller() {
                 </div>
             </div>
 
-            <div className="bg-white w-full relative" style={{height: 488 + "px"}}>
-                <div className="w-full px-15 flex absolute z-10" style={{top: -224 + 'px'}}>
-                    <div className="w-1/2 mr-3">
-                        <div className="text-4xl ttcommon_font_bold text-c_00080D" style={{lineHeight: 48 + 'px'}}>The Essential Series.</div>
-                        <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none flex flex-col" style={{height: 400 + 'px'}}>
-                            <div className="flex h-full px-15 justify-center">
-                                {[1, 2, 3].map(item => {
-                                    return <img style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
-                                })}
-                            </div>
-                        </div>
-                        <div className="ttcommon_font_thin mt-8 text-4xl text-c_00080D" style={{lineHeight: 48 + 'px'}}>Biphasic dermal fillers manufactured with over 30 years of Swedish research.</div>
-                    </div>
-                    <div className="w-1/2 ml-3">
-                        <div className="text-4xl ttcommon_font_bold text-c_00080D" style={{lineHeight: 48 + 'px'}}>The M Series.</div>
-                        <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none" style={{height: 400 + 'px'}}>
-                            <div className="flex h-full px-15 justify-center">
-                                {[4, 5, 6].map(item => {
-                                    return <img style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
-                                })}
-                            </div>
-                        </div>
-                        <div className="ttcommon_font_thin mt-8 text-4xl text-c_00080D" style={{lineHeight: 48 + 'px'}}>The next generation of monophasic dermal fillers with lidocaine.</div>
+            <div className="bg-white">
+                <div className="flex flex-col max-w-2xl mx-auto py-28">
+                    <div className="ttcommon_font_bold text-4xl text-center" style={{lineHeight: 26 + 'px'}}>Polydioxanone Threads.</div>
+                    <p className="mt-6 text-4xl ttcommon_font_thin text-center" style={{lineHeight: 48 + 'px'}}>Intraline’s PDO threads are CE marked with an excellent safety profile and virtually non-allergenic. PDO suture use has nearly 40 years of medical history supporting its use.</p>
+                    <div className="mt-8">
+                        <button className="mx-auto ttcommon_font_thin uppercase bg-c_00090D text-white h-11 w-64 flex items-center justify-center text-sm" style={{letterSpacing: 0.1 + 'em'}}>Browse catalog</button>
                     </div>
                 </div>
             </div>
+            
+            {/* what is pdo? */}
+            <div className=" bg-c_CCE7EF flex items-center py-32">
+                <div className="w-1/2 pr-32 pl-44">
+                    <div className="bg-white p-7 flex flex-col divide-y">
+                        <div className="pb-8">
+                            <div className="text-6xl ttcommon_font_bold" style={{lineHeight: 76 + "px"}}>PDO Threads.</div>
+                            <div className="uppercase mt-3">Select a question to learn more.</div>
+                        </div>
+                        <div className="pt-8 text-4xl">
+                            <div className="ttcommon_font_bold" style={{lineHeight: 48 + 'px'}}>What is PDO?</div>
+                            <div className="mt-7 ttcommon_font_thin">What are PDO Threads?</div>
+                            <div className="mt-7 ttcommon_font_thin">What is a PDO Treatment?</div>
+                            <div className="mt-7 ttcommon_font_thin">Types of PDO Threads.</div>
+                            <div className="mt-7 ttcommon_font_thin">PDO FAQ's.</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-1/2 pr-44">
+                    <div className="ttcommon_font_bold text-4xl" style={{lineHeight: 48 + 'px'}}>What is PDO?</div>
+                    <p className="ttcommon_font_thin text-sm mt-5">Intraline's Polydioxanone (PDO) Threads are essentially the cosmetic version of the reabsorbable sutures used regularly in heart surgery. With an excellent safety profile and virtually non-allergenic, PDO sutures have nearly 40 years of medical history supporting its use. PDO is manufactured through the polymerization of p-dioxanone to create a reabsorbable sterile filament which produces fibrosis in the surrounding tissue giving rise to the creation of type I and II collagen. Fully reabsorbable through enzymatic hydrolysis the threads are broken down within 6 months to a year leaving behind visibly healthier skin.</p>
+                </div>
+            </div>
 
-            <div className="bg-c_C3E0DC py-24">
+            <div className="bg-white py-24">
                 <div className="ttcommon_font_bold text-4xl text-center" style={{lineHeight: 26 + 'px'}}>Testimonials.</div>
                 <div className="mx-60 mt-12">
                     <Swiper 
