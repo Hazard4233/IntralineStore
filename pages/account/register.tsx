@@ -16,7 +16,7 @@ export default function Register() {
                             
                     <button className="mt-8 uppercase bg-c_00090D text-white py-4 w-full text-sm" style={{letterSpacing: 0.1 + 'em'}}>Register</button>
                     <div className="text-center mt-5">
-                        <Link href="/login">
+                        <Link href="/account/login">
                             <a className="text-base underline" style={{lineHeight: 26 + 'px'}}>Already have an account?</a>
                         </Link>
                     </div>

@@ -10,13 +10,28 @@
     font-family: ttcommon_font;
     src: url('./fonts/TTCommons/TTCommons-Regular.otf');
 }
+@font-face {
+    font-family: ttcommon_font_thin;
+    src: url("./fonts/TTCommons/TTCommons-Thin.otf");
+}
+@font-face {
+    font-family: ttcommon_font_bold;
+    src: url("./fonts/TTCommons/TTCommons-Bold.otf");
+}
 .ttcommon_font {
     font-family: ttcommon_font;
+}
+.ttcommon_font_thin {
+    font-family: ttcommon_font_thin;
+}
+.ttcommon_font_bold {
+    font-family: ttcommon_font_bold;
 }
 button:focus, input:focus, select:focus {
     outline: none;
 }
 
+/* swiper carousel css */
 .swiper-button-next, .swiper-button-prev {
     width: 32px !important;
 }
@@ -46,3 +61,11 @@ button:focus, input:focus, select:focus {
     background-color: black;
 }
 
+/* shop product title css */
+.s-p-title {
+    font-size: 200px;
+    line-height: 160px;
+}
+.img_bg_transparent {
+    mix-blend-mode: multiply;
+}

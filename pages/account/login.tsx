@@ -19,7 +19,7 @@ export default function Login() {
                     </div>
                     <button className="mt-8 uppercase bg-c_00090D text-white py-4 w-full text-sm" style={{letterSpacing: 0.1 + 'em'}}>Login</button>
                     <div className="text-center mt-5">
-                        <Link href="/register">
+                        <Link href="/account/register">
                             <a className="text-base underline" style={{lineHeight: 26 + 'px'}}>Don't have an account?</a>
                         </Link>
                     </div>
