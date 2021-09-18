@@ -8,22 +8,28 @@ import SwiperCore, { Navigation, Pagination, A11y} from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import QuoteSvg from '@components/icons/QuoteSvg'
+import ChevronRight from '@components/icons/ChevronRight'
+import { ChevronUp } from '@components/icons'
+import ChevronDown from '@components/icons/ChevronDown'
 SwiperCore.use([Navigation, Pagination])
 
 
-const renderTestimonial = () => {
-    return [0, 1, 2, 3, 4].map(item => {
-      return <SwiperSlide>
+const renderTestimonialSwiper = () => {
+    return [0, 1, 2, 3, 4].map((item, index) => {
+      return <SwiperSlide key={'testimonial_' + index}>
               <div className="">
-                <p className="ttcommon_font_thin text-sm text-center mx-auto" style={{maxWidth: 426 + 'px'}}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+                <p className="ttcommon_font_thin text-sm text-center mx-auto max-w-md">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
                 <div className="text-sm text-center mt-7" style={{lineHeight: 17 + 'px'}}>DR TUKBA YALCIN  |  DIRECTOR LUMIERE AESTHETICS</div>
               </div>
             </SwiperSlide>
     })
-  }
+}
 
-  const renderFAQCollapse = () => {
+
+const renderFAQCollapse = () => {
     const [myArray, setMyArray] = useState<Boolean[]>([]);
+    
     var items = [
       {
         'title': 'How does it work?',
@@ -46,30 +52,35 @@ const renderTestimonial = () => {
         'detail': 'The hyaluronic acid gel in Belotero Hydro are known for its water retention properties. It binds to moisture and increases in size, thereby replacing volume lost through fat loss.'
       }
     ]
+    const [enable_faq, setFaq] = useState(new Array(items.length).fill(false));
     // setMyArray(new Array(items.length).fill(false))
-    
-    function clickCollapse(index:any) {
-      console.log('Congratulation Eden Hazard!!!' + index)
-      // const temp_var = myArray || [];
-      // temp_var[index] = true;
-      // setMyArray(temp_var);
-    }
-    return items.map((item, index) => {
-      return <div className="ttcommon_font divide-y divide-c_00080D">
-                <div className="flex items-center w-full mt-10 pb-5 cursor-pointer" onClick={() => clickCollapse(index)}>
-                  <div className="ttcommon_font text-base" style={{letterSpacing: 0.1 + 'em'}}>{item.title}</div>
-                  <div className="ml-auto">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="text-sm pt-5">{item.detail}</div>
-                {/* {myArray[index] && } */}
-              </div>
-    })
   
-  }
+    function renderChevronUpDown(index: any) {
+      if (enable_faq[index]) return <ChevronUp className="h-4 w-4" />;
+      else return <ChevronDown className="h-4 w-4" />
+    }
+    
+    function clickChevron(index: any) {
+      const new_enable_faq = [...enable_faq]
+      new_enable_faq[index] = !new_enable_faq[index]
+      setFaq(new_enable_faq)
+    }
+  
+    return items.map((item, index) => {
+      return <div className="divide-y divide-c_00080D" key={'faq_' + index}>
+        <div className="flex items-center w-full mt-10 pb-5 cursor-pointer" onClick={() => clickChevron(index)}>
+          <div className="text-base">{item.title}</div>
+          <div className="ml-auto">
+            {renderChevronUpDown(index)}
+          </div>
+        </div>
+        <div>
+          {enable_faq[index] && <div className="text-sm pt-5">{item.detail}</div>}
+        </div>
+      </div>
+    })
+}
+
 
 
 export default function DemeralFiller() {
@@ -82,7 +93,7 @@ export default function DemeralFiller() {
                         <div className="s-p-title ttcommon_font_thin font-semibold">Dermal</div>
                         <div className="s-p-title ttcommon_font_bold" >Fillers</div>
                     </div>
-                    <div className="w-1/2 text-4xl ttcommon_font_thin" style={{maxWidth: 427 + 'px'}}>
+                    <div className="w-1/2 text-4xl ttcommon_font_thin max-w-md" style={{maxWidth: 427 + 'px'}}>
                         Carefully developed after years of research, Intraline's line up of six dermal fillers are CE marked and designed to treat all areas.
                     </div>
                 </div>
@@ -94,51 +105,50 @@ export default function DemeralFiller() {
             <div className="bg-white w-full relative" style={{height: 488 + "px"}}>
                 <div className="w-full px-15 flex absolute z-10" style={{top: -224 + 'px'}}>
                     <div className="w-1/2 mr-3">
-                        <div className="text-4xl ttcommon_font_bold text-c_00080D" style={{lineHeight: 48 + 'px'}}>The Essential Series.</div>
+                        <div className="line_hei_px_48 text-4xl ttcommon_font_bold text-c_00080D">The Essential Series.</div>
                         <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none flex flex-col" style={{height: 400 + 'px'}}>
                             <div className="flex h-full px-15 justify-center">
-                                {[1, 2, 3].map(item => {
-                                    return <img style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
+                                {[1, 2, 3].map((item, index) => {
+                                    return <img key={index} style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
                                 })}
                             </div>
                         </div>
-                        <div className="ttcommon_font_thin mt-8 text-4xl text-c_00080D" style={{lineHeight: 48 + 'px'}}>Biphasic dermal fillers manufactured with over 30 years of Swedish research.</div>
+                        <div className="line_hei_px_48 ttcommon_font_thin mt-8 text-4xl text-c_00080D">Biphasic dermal fillers manufactured with over 30 years of Swedish research.</div>
                     </div>
                     <div className="w-1/2 ml-3">
-                        <div className="text-4xl ttcommon_font_bold text-c_00080D" style={{lineHeight: 48 + 'px'}}>The M Series.</div>
+                        <div className="line_hei_px_48 text-4xl ttcommon_font_bold text-c_00080D">The M Series.</div>
                         <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none" style={{height: 400 + 'px'}}>
                             <div className="flex h-full px-15 justify-center">
-                                {[4, 5, 6].map(item => {
-                                    return <img style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
+                                {[4, 5, 6].map((item, index) => {
+                                    return <img key={index} style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
                                 })}
                             </div>
                         </div>
-                        <div className="ttcommon_font_thin mt-8 text-4xl text-c_00080D" style={{lineHeight: 48 + 'px'}}>The next generation of monophasic dermal fillers with lidocaine.</div>
+                        <div className="line_hei_px_48 ttcommon_font_thin mt-8 text-4xl text-c_00080D">The next generation of monophasic dermal fillers with lidocaine.</div>
                     </div>
                 </div>
             </div>
 
             <div className="bg-c_C3E0DC py-24">
-                <div className="ttcommon_font_bold text-4xl text-center" style={{lineHeight: 26 + 'px'}}>Testimonials.</div>
+                <div className="ttcommon_font_bold line_hei_px_26 text-4xl text-center">Testimonials.</div>
                 <div className="mx-60 mt-12">
                     <Swiper 
                         className="testimonial-carousel" 
-                        slidesPerView={1} 
+                        slidesPerView={1}
+                        loop={true}
                         modules={[Navigation, Pagination, A11y]}
                         pagination={{
                             el: '.testimonial-pagination-div',
                             clickable: true,
                         }}
                         navigation= {true}>
-                        {renderTestimonial()}
+                        {renderTestimonialSwiper()}
                     </Swiper>
                 </div>
                 <div className="mt-10 flex items-center relative mx-44">
                     <div className="testimonial-pagination-div flex justify-center"></div>
                     <div className="absolute left-3/5" style={{top: -120 + 'px'}}>
-                        <svg width="100" height="76" viewBox="0 0 100 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.3" d="M14.9254 76C14.9254 76 44.7761 61.098 44.7761 23.8431C44.7761 10.4314 34.3284 0 22.3881 0C10.4478 0 0 10.4314 0 22.3529C0 34.2745 10.4478 44.7059 22.3881 44.7059C19.403 58.1176 7.46269 65.5686 7.46269 65.5686L14.9254 76ZM70.1493 76C70.1493 76 100 61.098 100 23.8431C100 10.4314 89.5522 0 77.6119 0C65.6716 0 55.2239 10.4314 55.2239 22.3529C55.2239 34.2745 65.6716 44.7059 77.6119 44.7059C74.6269 58.1176 62.6866 65.5686 62.6866 65.5686L70.1493 76Z" fill="#87C1B9"/>
-                        </svg>
+                        <QuoteSvg fill="#87C1B9"/>
                     </div>
                 </div>
             </div>
@@ -147,17 +157,14 @@ export default function DemeralFiller() {
             <div className="bg-white">
                 <div className="mx-60 py-24">
                     <div className="flex text-c_00080D mb-2">
-                        <div className="font-bold text-4xl" style={{lineHeight: 26 + 'px'}}>Frequently Asked Questions.</div>
+                        <div className="line_hei_px_26 font-bold text-4xl">Frequently Asked Questions.</div>
                         <div className="flex items-center ml-auto">
                             <div className="font-bold text-lg">Read More</div>
                             <div className="ml-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
+                                <ChevronRight className="h-4 w-4" />
                             </div>
                         </div>
                     </div>
-                    
                     {renderFAQCollapse()}
                 </div>
             </div>
@@ -166,13 +173,13 @@ export default function DemeralFiller() {
             <div className="bg-c_F5DBDD">
                 <div className="mx-60 py-28">
                     <div className="flex flex-col max-w-md mx-auto">
-                        <div className="ttcommon_font_bold text-4xl" style={{lineHeight: 26 + 'px'}}>Download Our Catalog.</div>
+                        <div className="ttcommon_font_bold line_hei_px_26 text-4xl">Download Our Catalog.</div>
                         <p className="mt-5">Discover Intraline’s Dermal Fillers and PDO Threads. Enter your email to receive our complete product catalog.</p>
                         <div className="mt-10">
                             <input className="h-11 border-none bg-white w-full pl-5 py-2" type="text" placeholder="Your Email Address"/>
                         </div>
                         <div className="mt-10">
-                            <button className="ttcommon_font_thin uppercase bg-c_00090D text-white h-11 w-full flex items-center justify-center text-sm" style={{letterSpacing: 0.1 + 'em'}}>SUBMIT</button>
+                            <button className="custom_letter_space ttcommon_font_thin uppercase bg-c_00090D text-white h-11 w-full flex items-center justify-center text-sm">SUBMIT</button>
                         </div>
                     </div>
                 </div>
