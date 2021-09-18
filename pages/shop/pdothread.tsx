@@ -143,39 +143,46 @@ export default function DemeralFiller() {
                     <div className="testimonial-pagination-div flex justify-center"></div>
                     <div className="absolute left-3/5" style={{top: -120 + 'px'}}>
                         <svg width="100" height="76" viewBox="0 0 100 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.3" d="M14.9254 76C14.9254 76 44.7761 61.098 44.7761 23.8431C44.7761 10.4314 34.3284 0 22.3881 0C10.4478 0 0 10.4314 0 22.3529C0 34.2745 10.4478 44.7059 22.3881 44.7059C19.403 58.1176 7.46269 65.5686 7.46269 65.5686L14.9254 76ZM70.1493 76C70.1493 76 100 61.098 100 23.8431C100 10.4314 89.5522 0 77.6119 0C65.6716 0 55.2239 10.4314 55.2239 22.3529C55.2239 34.2745 65.6716 44.7059 77.6119 44.7059C74.6269 58.1176 62.6866 65.5686 62.6866 65.5686L70.1493 76Z" fill="#87C1B9"/>
+                            <path opacity="0.3" d="M14.9254 76C14.9254 76 44.7761 61.098 44.7761 23.8431C44.7761 10.4314 34.3284 0 22.3881 0C10.4478 0 0 10.4314 0 22.3529C0 34.2745 10.4478 44.7059 22.3881 44.7059C19.403 58.1176 7.46269 65.5686 7.46269 65.5686L14.9254 76ZM70.1493 76C70.1493 76 100 61.098 100 23.8431C100 10.4314 89.5522 0 77.6119 0C65.6716 0 55.2239 10.4314 55.2239 22.3529C55.2239 34.2745 65.6716 44.7059 77.6119 44.7059C74.6269 58.1176 62.6866 65.5686 62.6866 65.5686L70.1493 76Z" fill="#C6CBDD"/>
                         </svg>
+
                     </div>
                 </div>
             </div>
 
-            {/* FAQ part */}
-            <div className="bg-white">
-                <div className="mx-60 py-24">
-                    <div className="flex text-c_00080D mb-2">
-                        <div className="font-bold text-4xl" style={{lineHeight: 26 + 'px'}}>Frequently Asked Questions.</div>
-                        <div className="flex items-center ml-auto">
-                            <div className="font-bold text-lg">Read More</div>
-                            <div className="ml-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    {renderFAQCollapse()}
-                </div>
-            </div>
             
-            {/* Download Catalog */}
-            <div className="bg-c_F5DBDD">
+            
+            {/* Question part */}
+            <div className=" bg-c_C6CBDD">
                 <div className="mx-60 py-28">
-                    <div className="flex flex-col max-w-md mx-auto">
-                        <div className="ttcommon_font_bold text-4xl" style={{lineHeight: 26 + 'px'}}>Download Our Catalog.</div>
-                        <p className="mt-5">Discover Intraline’s Dermal Fillers and PDO Threads. Enter your email to receive our complete product catalog.</p>
+                    <div className="flex flex-col max-w-lg mx-auto">
+                        <div className="ttcommon_font_bold text-4xl" style={{lineHeight: 26 + 'px'}}>Any more questions?</div>
+                        <p className="mt-5">We are here to help --- reach out with any questions.</p>
                         <div className="mt-10">
-                            <input className="h-11 border-none bg-white w-full pl-5 py-2" type="text" placeholder="Your Email Address"/>
+                            <input className="h-11 border-none bg-white w-full pl-5 py-2" type="text" placeholder="First name"/>
+                        </div>
+                        <div className="mt-10">
+                            <input className="h-11 border-none bg-white w-full pl-5 py-2" type="text" placeholder="Company Name"/>
+                        </div>
+                        <div className="mt-10">
+                            <input className="h-11 border-none bg-white w-full pl-5 py-2" type="text" placeholder="Email"/>
+                        </div>
+                        <div className="mt-10">
+                            <select className="h-11 border-none bg-white w-full pl-5 pr-3 py-2 text-c_8D97BC" name="" id="">
+                                <option value="Choose Country or Region">Choose Country or Region</option>
+                            </select>
+                        </div>
+                        <div className="mt-10">
+                            <textarea className="h-24 border-none bg-white w-full pl-5 py-2" placeholder="Write Your Comment!"></textarea>
+                        </div>
+                        <div className="mt-5">
+                            <div><strong className="underline">Intraline’s Privacy Policy.</strong> If you consent to us contacting you for this purpose, please tick below:</div>
+                        </div>
+                        <div className="mt-5 flex items-center">
+                            <div>
+                                <input type="checkbox" name="" id="" />
+                            </div>
+                            <div className="ml-2">I agree to receive other communications from Intraline.</div>
                         </div>
                         <div className="mt-10">
                             <button className="ttcommon_font_thin uppercase bg-c_00090D text-white h-11 w-full flex items-center justify-center text-sm" style={{letterSpacing: 0.1 + 'em'}}>SUBMIT</button>
