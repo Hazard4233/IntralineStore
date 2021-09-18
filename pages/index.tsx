@@ -136,9 +136,11 @@ const renderFAQCollapse = () => {
 
 }
 
-export default function Home({
+export default function Home(
+  // {
   // story,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+// }: InferGetStaticPropsType<typeof getStaticProps>
+  ) {
   // const liveStory = useStoryblok(story);
 
   // const components = liveStory.content.body.map((blok: SbEditableContent) => { 
