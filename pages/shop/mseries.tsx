@@ -11,12 +11,12 @@ import 'swiper/css/pagination';
 import QuoteSvg from '@components/icons/QuoteSvg'
 SwiperCore.use([Navigation, Pagination])
 
-const renderPDOThreadSwiper = () => {
+const renderMSeriesSwiper = () => {
     return [0, 1, 2, 3, 4].map((item, index) => {
         return <SwiperSlide key={'pdo_thread_' + index}>
                     <div className="">
-                        <img src="../../assets/img/lifting_thread_1.png" alt="" />
-                        <div className="uppercase text-2xl text-center font-semibold">Lifting Threads</div>
+                        <img className="mx-auto" src={"../../assets/img/mseries_" + String(item + 1) + ".png"} alt="" />
+                        <div className="custom_letter_space uppercase text-2xl text-center font-semibold">M2 Plus | $100.00</div>
                     </div>
                 </SwiperSlide>
     })
@@ -34,20 +34,20 @@ const renderTestimonialSwiper = () => {
   }
 
 
-export default function DemeralFiller() {
+export default function MSeries() {
     return(
         <div className="ttcommon_font text-c_00080D">
             <div className="relative bg-white w-full flex flex-col" style={{height: 900 + 'px'}}>
                 <div className="absolute w-full h-full flex">
                     <div className="w-5/12 h-full"></div>
-                    <div className="w-7/12 h-full bg-c_F5DBDD"></div>
+                    <div className="w-7/12 h-full bg-c_CCE7EF" style={{borderTopLeftRadius: 70 + '%', borderBottomLeftRadius: 40 + '%'}}></div>
                 </div>
                 <div className="flex my-auto w-full h-full px-15 z-10">
                     <div className="w-7/12 flex flex-col">
                         <div className="my-auto">
-                            <div className="s-p-title ttcommon_font_thin font-semibold">PDO</div>
-                            <div className="s-p-title ttcommon_font_bold" >Threads</div>
-                            <div className="line_hei_px_48 ttcommon_font_thin w-7/12 font-semibold mt-8 mx-auto text-4xl text-c_00080D">An excellent treatment option for combatting facial ageing, skin stress, and other related concerns.</div>
+                            <div className="s-p-title ttcommon_font_thin font-semibold">The</div>
+                            <div className="s-p-title ttcommon_font_bold" >M Series</div>
+                            <div className="line_hei_px_48 ttcommon_font_thin w-7/12 font-semibold mt-8 mx-auto text-4xl text-c_00080D">The M Series from Intraline is the next generation of monophasic dermal fillers with lidocaine. </div>
                         </div>
                     </div>
                     <div className="w-5/12 flex flex-col">
@@ -64,14 +64,14 @@ export default function DemeralFiller() {
                                 navigation= {true}
                                 autoplay={{
                                     delay: 2000
-                                }}
-                                >
-                                {renderPDOThreadSwiper()}
+                                }}>
+                                {renderMSeriesSwiper()}
                             </Swiper>
                             <div className="mt-10 flex items-center relative mx-44">
                                 <div className="pdo-thread-pagination-div flex justify-center"></div>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -116,15 +116,12 @@ export default function DemeralFiller() {
                     <Swiper 
                         className="testimonial-carousel" 
                         slidesPerView={1} 
-                        modules={[Navigation, Pagination, A11y, Autoplay]}
+                        modules={[Navigation, Pagination, A11y]}
                         pagination={{
                             el: '.testimonial-pagination-div',
                             clickable: true,
                         }}
-                        navigation= {true}
-                        autoplay={{
-                            delay: 2000
-                        }}>
+                        navigation= {true}>
                         {renderTestimonialSwiper()}
                     </Swiper>
                 </div>
@@ -182,4 +179,4 @@ export default function DemeralFiller() {
     )
 }
 
-DemeralFiller.Layout = Layout
+MSeries.Layout = Layout

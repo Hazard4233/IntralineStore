@@ -4,7 +4,7 @@ import Link from '@components/ui/Link';
 export default function Register() {
     return (
         <div>
-            <Navbar c_name="bg-black"></Navbar>
+            <Navbar c_name="bg-black sticky"></Navbar>
             <div className="h-screen bg-c_CCE7EF flex flex-col ttcommon_font">
             <div className="my-auto mx-auto w-1/4">
                     <div className="line_hei_px_26 font-bold text-4xl text-left">Create Your Account.</div>

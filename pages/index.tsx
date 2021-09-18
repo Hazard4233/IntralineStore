@@ -10,7 +10,7 @@ import { useRef, useState } from 'react'
 
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination, A11y } from 'swiper'
+import SwiperCore, { Navigation, Pagination, A11y, Autoplay } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -192,7 +192,10 @@ export default function Home(
           spaceBetween={20}
           slidesPerView={4}
           loop={true}
-          modules={[Navigation, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y, Autoplay]}
+          autoplay={{
+            delay: 2000
+          }}
           pagination={{
             el: '.category-pagination-div',
             clickable: true,
@@ -246,7 +249,10 @@ export default function Home(
             spaceBetween={20}
             slidesPerView={5}
             loop={true}
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            autoplay={{
+              delay: 2000
+            }}
             pagination={{
               el: '.feature-custom-pagination-div',
               clickable: true,
@@ -274,7 +280,10 @@ export default function Home(
             spaceBetween={0}
             slidesPerView={3}
             loop={true}
-            modules={[Navigation, Pagination, A11y]}>
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            autoplay={{
+              delay: 2000
+            }}>
             {renderProfileImgSwiper()}
           </Swiper>
         </div>
@@ -283,7 +292,10 @@ export default function Home(
             className="profile-img-carousel"
             slidesPerView={1}
             loop={true}
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
+            autoplay={{
+              delay: 2000
+            }}
             pagination={{
               el: '.profile-custom-pagination-div',
               clickable: true,

@@ -1,5 +1,5 @@
 .root {
-  @apply fixed top-0 z-40 w-full;
+  @apply top-0 z-40 w-full;
 }
 
 .link {

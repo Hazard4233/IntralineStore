@@ -2,7 +2,7 @@ import cn from 'classnames'
 import dynamic from 'next/dynamic'
 import s from './Layout.module.css'
 import { useRouter } from 'next/router'
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { useUI } from '@components/ui/context'
 import { Navbar, Footer } from '@components/common'
 import { useAcceptCookies } from '@lib/hooks/useAcceptCookies'
@@ -53,10 +53,14 @@ const Layout: FC<Props> = ({ children, pageProps }) => {
   } = useUI()
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
+  const [current_url, setCurrentUrl] = useState('')
+  useEffect(() => {
+    setCurrentUrl(window.location.pathname)  
+  })
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
-        <Navbar c_name="bg-transparent"/>
+        {current_url === '/' ? <Navbar c_name="bg-transparent fixed"/> : <Navbar c_name="bg-black sticky"/>}
         <main className="fit">{children}</main>
         
         <Footer pages={pageProps.pages} />

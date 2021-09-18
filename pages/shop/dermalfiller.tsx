@@ -86,7 +86,6 @@ const renderFAQCollapse = () => {
 export default function DemeralFiller() {
     return(
         <div className="ttcommon_font text-c_00080D">
-            <Navbar c_name="bg-black"></Navbar>
             <div className="relative bg-c_CCE7EF w-full px-15 pb-32 flex flex-col" style={{height: 900 + 'px'}}>
                 <div className="flex my-auto w-full">
                     <div className="w-1/2">
