@@ -52,7 +52,7 @@ const renderCategorySwiper = () => {
     return <SwiperSlide key={'category_' + index}>
       <div className="flex flex-col pt-4 pb-10 bg-white">
         <div className="flex">
-          <img className="mx-auto" src="../assets/img/product1.png" alt="" />
+          <img className="mx-auto" src="/assets/img/product1.png" alt="" />
         </div>
         <div className="uppercase text-center text-color_1 tracking-widest font-bold text-2xl">DERMAL FILLERS</div>
       </div>
@@ -66,7 +66,7 @@ const renderProductSwiper = () => {
       <div className="flex flex-col pt-4 pb-10 bg-white relative">
         <div className="ttcommon_font_bold absolute top-0 right-0 bg-c_52B5D3 text-c_00080D text-lg py-1 px-8">$30.00</div>
         <div className="flex">
-          <img className="mx-auto" src="../assets/img/product1.png" alt="" />
+          <img className="mx-auto" src="/assets/img/product1.png" alt="" />
         </div>
         <div className="uppercase text-center text-color_1 tracking-widest font-bold text-2xl">DERMAL FILLERS</div>
       </div>
@@ -174,7 +174,7 @@ export default function Home(
 
   return (
     <div className="bg-c_CCE7EF ttcommon_font">
-      <img className="w-full" src="../assets/img/home-part1-bg.png"></img>
+      <img className="w-full" src="/assets/img/home-part1-bg.png"></img>
       <div className="z-50 text-white font-bold -mt-32 mx-60 flex">
         <div className="text-4xl">Our Categories.</div>
         <div className="flex items-center ml-auto">
@@ -225,10 +225,10 @@ export default function Home(
           <button className="w-52 h-11 uppercase bg-c_00090D flex justify-center items-center text-white text-sm mx-auto my-auto">learn more</button>
         </div>
         <div className="absolute top-0 left-0">
-          <img src="../assets/img/triple_red.png" alt="" />
+          <img src="/assets/img/triple_red.png" alt="" />
         </div>
         <div className="absolute bottom-0 right-0">
-          <img src="../assets/img/triple_blue.png" alt="" />
+          <img src="/assets/img/triple_blue.png" alt="" />
         </div>
       </div>
 

@@ -15,7 +15,7 @@ const renderPDOThreadSwiper = () => {
     return [0, 1, 2, 3, 4].map((item, index) => {
         return <SwiperSlide key={'pdo_thread_' + index}>
                     <div className="">
-                        <img src="../../assets/img/lifting_thread_1.png" alt="" />
+                        <img src="/assets/img/lifting_thread_1.png" alt="" />
                         <div className="uppercase text-2xl text-center font-semibold">Lifting Threads</div>
                     </div>
                 </SwiperSlide>

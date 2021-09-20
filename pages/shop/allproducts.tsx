@@ -49,19 +49,19 @@ const nonNullable = (v: any) => v
 
 const renderCategorySwiper = () => {
     var category_li = [
-        { name: 'Dermal Fillers', img: "../../assets/img/mseries_1.png" },
-        { name: 'PDO Threads', img: "../../assets/img/lifting-1-1.png" },
-        { name: 'Skincare', img: "../../assets/img/skin-care.png" },
-        { name: 'Dermal Fillers', img: "../../assets/img/mseries_5.png" },
-        { name: 'Dermal Fillers', img: "../../assets/img/mseries_4.png" },
-        { name: 'Dermal Fillers', img: "../../assets/img/mseries_3.png" },
-        { name: 'Dermal Fillers', img: "../../assets/img/mseries_2.png" },
+        { name: 'Dermal Fillers', img: "/assets/img/mseries_1.png" },
+        { name: 'PDO Threads', img: "/assets/img/lifting-1-1.png" },
+        { name: 'Skincare', img: "/assets/img/skin-care.png" },
+        { name: 'Dermal Fillers', img: "/assets/img/mseries_5.png" },
+        { name: 'Dermal Fillers', img: "/assets/img/mseries_4.png" },
+        { name: 'Dermal Fillers', img: "/assets/img/mseries_3.png" },
+        { name: 'Dermal Fillers', img: "/assets/img/mseries_2.png" },
     ]
     return category_li.map((item, index) => {
         return <SwiperSlide key={'category_' + index}>
             <div className="flex flex-col bg-white pt-5 pb-12" style={{ height: 472 }}>
                 <div className="flex-1 px-20 h-0">
-                    <img className="h-full object-contain" src={item.img} alt="" />
+                    <img className="h-full object-contain mx-auto" src={item.img} alt="" />
                 </div>
                 <div className="uppercase text-center text-color_1 tracking-widest font-bold text-2xl mt-auto">{item.name}</div>
             </div>
@@ -79,7 +79,7 @@ const renderProducts = () => {
             key={'m' + String(index + 1) + '-product'}>
             <div className="ttcommon_font_bold absolute top-0 right-0 bg-c_52B5D3 text-c_00080D text-lg py-1 px-8">$100.00</div>
             <div className="flex">
-                <img className="mix_blend_multi mx-auto " src="../../assets/img/product1.png" alt="" />
+                <img className="mix_blend_multi mx-auto " src="/assets/img/product1.png" alt="" />
             </div>
             <div className="ttcommon_font_bold uppercase text-center text-color_1 tracking-widest text-2xl">M{index + 1} PLUS</div>
             <div className="mt-2 text-sm leading-14_26 text-center">Lorem ipsum doloris sit estimatum estiumen.</div>

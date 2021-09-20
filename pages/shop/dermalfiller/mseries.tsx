@@ -15,7 +15,7 @@ const renderMSeriesSwiper = () => {
     return [0, 1, 2, 3, 4].map((item, index) => {
         return <SwiperSlide key={'pdo_thread_' + index}>
                     <div className="">
-                        <img className="mx-auto" src={"../../assets/img/mseries_" + String(item + 1) + ".png"} alt="" />
+                        <img className="mx-auto" src={"/assets/img/mseries_" + String(item + 1) + ".png"} alt="" />
                         <div className="uppercase text-2xl text-center tracking-widest font-semibold">M2 Plus | $100.00</div>
                     </div>
                 </SwiperSlide>

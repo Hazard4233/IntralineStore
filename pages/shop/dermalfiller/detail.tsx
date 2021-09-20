@@ -87,7 +87,7 @@ const renderMseries = () => {
                     key={'m' + String(index + 1) + '-product'}>
                     <div className="ttcommon_font_bold absolute top-0 right-0 bg-c_52B5D3 text-c_00080D text-lg py-1 px-8">$100.00</div>
                     <div className="flex">
-                        <img className="mix_blend_multi mx-auto " src="../../assets/img/product1.png" alt="" />
+                        <img className="mix_blend_multi mx-auto " src="/assets/img/product1.png" alt="" />
                     </div>
                     <div className="ttcommon_font_bold uppercase text-center text-color_1 tracking-widest text-2xl">M{index + 1} PLUS</div>
                     <div className="mt-2 text-sm leading-14_26 text-center">Lorem ipsum doloris sit estimatum estiumen.</div>
@@ -138,9 +138,9 @@ export default function DermalFillerDetail() {
                     </div>
                     <div className="w-6/12 flex flex-col items-end">
                         <div className="mb-auto h-full bg-c_CCE7EF relative flex flex-col">
-                            <img className="mix_blend_multi ml-auto h-full" src="../../assets/img/SmokeM2.png" alt="" />
+                            <img className="mix_blend_multi ml-auto h-full" src="/assets/img/SmokeM2.png" alt="" />
                             <div className="w-full h-full flex absolute">
-                                <img className="m-auto" src="../../assets/img/mseries_3.png" alt="" />
+                                <img className="m-auto" src="/assets/img/mseries_3.png" alt="" />
                             </div>
                         </div>
                     </div>

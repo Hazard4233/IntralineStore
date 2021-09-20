@@ -97,7 +97,7 @@ export default function DemeralFiller() {
                     </div>
                 </div>
                 <div className="absolute top-0 right-0 h-full">
-                    <img className="mix_blend_multi h-full" src="../../assets/img/BluePurpleSmoke.png" alt="" />
+                    <img className="mix_blend_multi h-full" src="/assets/img/BluePurpleSmoke.png" alt="" />
                 </div>
             </div>
 
@@ -108,7 +108,7 @@ export default function DemeralFiller() {
                         <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none flex flex-col" style={{height: 400 + 'px'}}>
                             <div className="flex h-full px-15 justify-center">
                                 {[1, 2, 3].map((item, index) => {
-                                    return <img key={index} style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
+                                    return <img key={index} style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"/assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
                                 })}
                             </div>
                         </div>
@@ -119,7 +119,7 @@ export default function DemeralFiller() {
                         <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none" style={{height: 400 + 'px'}}>
                             <div className="flex h-full px-15 justify-center">
                                 {[4, 5, 6].map((item, index) => {
-                                    return <img key={index} style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"../../assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
+                                    return <img key={index} style={{marginLeft: (item + 1) % 2 * -100 + 'px', marginRight: (item + 1) % 2 * -100 + 'px'}} src={"/assets/img/shop-dermalfiller-" + item + ".png"} alt="" />
                                 })}
                             </div>
                         </div>

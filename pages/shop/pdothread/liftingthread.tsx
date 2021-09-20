@@ -17,7 +17,7 @@ const renderPDOThreadSwiper = () => {
                     <div className="" style={{width: 550}}>
                         <div className="ttcommon_font_bold text-4xl leading-36_48">Dimension 360.</div>
                         <div className="bg-c_CCE7EF w-full mt-10">
-                            <img className="w-full" src="../../assets/img/lifting-1.png" alt="" />
+                            <img className="w-full" src="/assets/img/lifting-1.png" alt="" />
                         </div>
                         <div className="ttcommon_font_thin mt-7 uppercase text-3xl leading-36_48">Lorem ipsum doloris sit estimatum estiumen ipsum doloris sit estimatum.</div>
                     </div>

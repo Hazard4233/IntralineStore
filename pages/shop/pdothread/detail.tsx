@@ -87,7 +87,7 @@ const renderPDOThreads = () => {
                     key={'m' + String(index + 1) + '-product'}>
                     <div className="ttcommon_font_bold absolute top-0 right-0 bg-c_52B5D3 text-c_00080D text-lg py-1 px-8">$100.00</div>
                     <div className="flex">
-                        <img className="mix_blend_multi mx-auto " src="../../assets/img/lifting-1-1.png" alt="" />
+                        <img className="mix_blend_multi mx-auto " src="/assets/img/lifting-1-1.png" alt="" />
                     </div>
                     <div className="ttcommon_font_bold mt-5 uppercase text-center text-color_1 tracking-widest text-2xl">Dimension 360</div>
                     <div className="mt-2 text-sm leading-14_26 text-center">Lorem ipsum doloris sit estimatum estiumen.</div>
@@ -138,7 +138,7 @@ export default function PDOThreadDetail() {
                     </div>
                     <div className="w-6/12 flex flex-col items-end">
                         <div className="mb-auto h-full relative flex flex-col">
-                            <img className="mix_blend_multi ml-auto h-full" src="../../assets/img/thread_detail.png" alt="" />
+                            <img className="mix_blend_multi ml-auto h-full" src="/assets/img/thread_detail.png" alt="" />
                         </div>
                     </div>
                 </div>
