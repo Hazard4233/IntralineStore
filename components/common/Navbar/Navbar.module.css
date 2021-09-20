@@ -1,22 +1,35 @@
 .root {
-  @apply top-0 z-40 w-full;
+  @apply fixed top-0 z-40 w-full;
 }
-
+.nav_item {
+  @apply relative h-full;
+}
 .link {
-  @apply inline-flex items-center text-white leading-6 transition ease-in-out duration-75 cursor-pointer mx-12 text-sm;
-  line-height: 17px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  @apply relative h-full flex items-center text-white transition ease-in-out duration-75 cursor-pointer px-12 text-sm leading-14_17 tracking-widest uppercase;  
 }
 
 .link:hover {
   @apply text-opacity-75;
 }
-
+.link::after, .link::before {
+  @apply transition-all duration-300;
+}
+.link::after {
+  @apply absolute bottom-0 left-0 right-0 m-auto w-0 text-transparent bg-white h-0.5;
+  content: '.';
+}
+.link:hover::after{
+  @apply w-full;
+}
+.submenu {
+  @apply bg-c_52B5D3 w-full py-12 fixed left-0 hidden;
+}
+.nav_item:hover .submenu {
+  @apply block;
+}
 .svg {
   @apply mx-4 cursor-pointer
 }
 .logo {
-  @apply cursor-pointer;
-  margin-right: 400px;
+  @apply cursor-pointer mr-96;
 }

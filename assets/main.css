@@ -25,9 +25,6 @@ button:focus, input:focus, select:focus {outline: none;}
 .ttcommon_font_thin {font-family: ttcommon_font_thin;}
 .ttcommon_font_bold {font-family: ttcommon_font_bold;}
 .pos_center {position: absolute;left: 50%;transform: translate(-50%);}
-.line_hei_px_26 {line-height: 26px;}
-.line_hei_px_48 {line-height: 48px;}
-.custom_letter_space {letter-spacing: 0.1em;}
 
 .text_overflow_one_line {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .textellipsis_2 {display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;}
@@ -46,4 +43,4 @@ button:focus, input:focus, select:focus {outline: none;}
 
 /* shop product title css */
 .s-p-title {font-size: 200px;line-height: 160px;}
-.img_bg_transparent {mix-blend-mode: multiply;}
+.mix_blend_multi {mix-blend-mode: multiply;}

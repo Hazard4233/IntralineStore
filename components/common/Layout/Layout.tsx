@@ -60,7 +60,7 @@ const Layout: FC<Props> = ({ children, pageProps }) => {
   return (
     <CommerceProvider locale={locale}>
       <div className={cn(s.root)}>
-        {current_url === '/' ? <Navbar c_name="bg-transparent fixed"/> : <Navbar c_name="bg-black sticky"/>}
+        {current_url === '/' ? <Navbar c_name="bg-transparent"/> : <Navbar c_name="bg-black"/>}
         <main className="fit">{children}</main>
         
         <Footer pages={pageProps.pages} />

@@ -14,10 +14,20 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      visibility: ['hover', 'focus', 'group-hover'],
+    }
+  },
   theme: {
     extend: {
       maxWidth: {
         '8xl': '1920px',
+      },
+      boxShadow: {
+        'outline-2': '0 0 0 2px var(--accents-2)',
+        magical:
+          'rgba(0, 0, 0, 0.02) 0px 30px 30px, rgba(0, 0, 0, 0.03) 0px 0px 8px, rgba(0, 0, 0, 0.05) 0px 1px 0px',
       },
       colors: {
         primary: 'var(--primary)',
@@ -56,23 +66,34 @@ module.exports = {
         c_C6CBDD: '#C6CBDD',
         c_C3E0DC: '#C3E0DC',
         c_E5E5E5: '#E5E5E5',
-        c_87C1B9: '#87C1B9'
+        c_87C1B9: '#87C1B9',
+        c_F297F6: '#F297F6',
+        c_D5CBA1: '#D5CBA1',
+        
+      },
+      fontSize: {
+        '12_5': '12.5rem'
+      },
+      lineHeight: {
+        'extra-loose': '2.2',
+        '14_17': '1.2142', // fontsize:14px;lineheight:17px
+        '14_26': '1.857', // fontsize:14px;lineheight:26px
+        '24_29': '1.2083', // fontsize:24px; lineheight:29px
+        '36_26': '0.722', // fontsize:36px; lineheight:26px
+        '36_48': '1.333', // fontsize:36px; lineheight:48px
+        '64_76': '1.1875', // fontsize:64px; lineheight:76px
+        '200_160': '0.8', // fontsize:200px;lineheight:160px
+      },
+      margin: {
+        '172': '172px'
+      },
+      scale: {
+        120: '1.2',
       },
       textColor: {
         base: 'var(--text-base)',
         primary: 'var(--text-primary)',
         secondary: 'var(--text-secondary)',
-      },
-      boxShadow: {
-        'outline-2': '0 0 0 2px var(--accents-2)',
-        magical:
-          'rgba(0, 0, 0, 0.02) 0px 30px 30px, rgba(0, 0, 0, 0.03) 0px 0px 8px, rgba(0, 0, 0, 0.05) 0px 1px 0px',
-      },
-      lineHeight: {
-        'extra-loose': '2.2',
-      },
-      scale: {
-        120: '1.2',
       },
     },
   },

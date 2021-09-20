@@ -128,13 +128,13 @@ const Footer: FC<Props> = ({ className, pages }) => {
                       <Logo />
                     </a>
                   </Link>
-                  <p className="line_hei_px_26 textellipsis_4 text-white text-sm">We believe confidence is created  in many forms and looks different for everyone. We believe in individuality. Intraline is a family owned, innovative aesthetics company comitted to your overall health and well-being: both inside and out. We belive that confidence is ageless.</p>
+                  <p className="textellipsis_4 leading-14_26 text-white text-sm">We believe confidence is created  in many forms and looks different for everyone. We believe in individuality. Intraline is a family owned, innovative aesthetics company comitted to your overall health and well-being: both inside and out. We belive that confidence is ageless.</p>
                   <div className="text-white text-sm mt-4">2021 Intraline. All rights reserved.</div>
                 </div>
                 <div className="ml-auto flex flex-col
                                 w-5/12 md:w-4/12 lg:w-4/12 xl:w-4/12">
                   <Link href="/">
-                    <div className="custom_letter_space uppercase text-white text-sm h-15 flex items-center">Infraline</div>
+                    <div className="uppercase text-white text-sm tracking-widest h-15 flex items-center">Infraline</div>
                   </Link>
                   <div className="mb-auto">
                     <Link href="/">
@@ -175,7 +175,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
                                 w-6/12 md:w-4/12 lg:w-4/12 xl:w-4/12
                                 ml-0 md:ml-auto lg:ml-auto xl:ml-auto">
                   <Link href="/">
-                    <a className="custom_letter_space uppercase text-white text-sm h-15 flex items-center">Account</a>
+                    <a className="uppercase text-white text-sm tracking-widest h-15 flex items-center">Account</a>
                   </Link>
                   <div className="mb-auto">
                     <Link href="/">
@@ -208,7 +208,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
                 </div>
                 <div className="w-5/12 md:w-8/12 lg:w-8/12 xl:w-8/12 flex flex-col">
                   <Link href="/">
-                    <a className="custom_letter_space uppercase text-white text-sm h-15 flex items-center">Subscribe to our newsletter</a>
+                    <a className="uppercase text-white text-sm tracking-widest h-15 flex items-center">Subscribe to our newsletter</a>
                   </Link>
                   <div className="flex h-11 my-auto">
                     <input type="text" className="h-full w-full border-none bg-white pl-5 py-2 placeholder-c_00080D" placeholder="Your email address"/>

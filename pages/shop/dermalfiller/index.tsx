@@ -89,22 +89,22 @@ export default function DemeralFiller() {
             <div className="relative bg-c_CCE7EF w-full px-15 pb-32 flex flex-col" style={{height: 900 + 'px'}}>
                 <div className="flex my-auto w-full">
                     <div className="w-1/2">
-                        <div className="s-p-title ttcommon_font_thin font-semibold">Dermal</div>
-                        <div className="s-p-title ttcommon_font_bold" >Fillers</div>
+                        <div className="ttcommon_font_thin font-semibold text-12_5 leading-200_160">Dermal</div>
+                        <div className="ttcommon_font_bold text-12_5 leading-200_160" >Fillers</div>
                     </div>
                     <div className="w-1/2 text-4xl ttcommon_font_thin max-w-md" style={{maxWidth: 427 + 'px'}}>
                         Carefully developed after years of research, Intraline's line up of six dermal fillers are CE marked and designed to treat all areas.
                     </div>
                 </div>
                 <div className="absolute top-0 right-0 h-full">
-                    <img className="img_bg_transparent h-full" src="../../assets/img/BluePurpleSmoke.png" alt="" />
+                    <img className="mix_blend_multi h-full" src="../../assets/img/BluePurpleSmoke.png" alt="" />
                 </div>
             </div>
 
             <div className="bg-white w-full relative" style={{height: 488 + "px"}}>
                 <div className="w-full px-15 flex absolute z-10" style={{top: -224 + 'px'}}>
                     <div className="w-1/2 mr-3">
-                        <div className="line_hei_px_48 text-4xl ttcommon_font_bold text-c_00080D">The Essential Series.</div>
+                        <div className="leading-36_48 text-4xl ttcommon_font_bold text-c_00080D">The Essential Series.</div>
                         <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none flex flex-col" style={{height: 400 + 'px'}}>
                             <div className="flex h-full px-15 justify-center">
                                 {[1, 2, 3].map((item, index) => {
@@ -112,10 +112,10 @@ export default function DemeralFiller() {
                                 })}
                             </div>
                         </div>
-                        <div className="line_hei_px_48 ttcommon_font_thin mt-8 text-4xl text-c_00080D">Biphasic dermal fillers manufactured with over 30 years of Swedish research.</div>
+                        <div className="leading-36_48 ttcommon_font_thin mt-8 text-4xl text-c_00080D">Biphasic dermal fillers manufactured with over 30 years of Swedish research.</div>
                     </div>
                     <div className="w-1/2 ml-3">
-                        <div className="line_hei_px_48 text-4xl ttcommon_font_bold text-c_00080D">The M Series.</div>
+                        <div className="leading-36_48 text-4xl ttcommon_font_bold text-c_00080D">The M Series.</div>
                         <div className="mt-10 pt-5 bg-c_C6CBDD w-full border-none" style={{height: 400 + 'px'}}>
                             <div className="flex h-full px-15 justify-center">
                                 {[4, 5, 6].map((item, index) => {
@@ -123,13 +123,13 @@ export default function DemeralFiller() {
                                 })}
                             </div>
                         </div>
-                        <div className="line_hei_px_48 ttcommon_font_thin mt-8 text-4xl text-c_00080D">The next generation of monophasic dermal fillers with lidocaine.</div>
+                        <div className="leading-36_48 ttcommon_font_thin mt-8 text-4xl text-c_00080D">The next generation of monophasic dermal fillers with lidocaine.</div>
                     </div>
                 </div>
             </div>
 
             <div className="bg-c_C3E0DC py-24">
-                <div className="ttcommon_font_bold line_hei_px_26 text-4xl text-center">Testimonials.</div>
+                <div className="ttcommon_font_bold leading-36_26 text-4xl text-center">Testimonials.</div>
                 <div className="mx-60 mt-12">
                     <Swiper 
                         className="testimonial-carousel" 
@@ -156,7 +156,7 @@ export default function DemeralFiller() {
             <div className="bg-white">
                 <div className="mx-60 py-24">
                     <div className="flex text-c_00080D mb-2">
-                        <div className="line_hei_px_26 font-bold text-4xl">Frequently Asked Questions.</div>
+                        <div className="leading-36_26 font-bold text-4xl">Frequently Asked Questions.</div>
                         <div className="flex items-center ml-auto">
                             <div className="font-bold text-lg">Read More</div>
                             <div className="ml-2">
@@ -172,13 +172,13 @@ export default function DemeralFiller() {
             <div className="bg-c_F5DBDD">
                 <div className="mx-60 py-28">
                     <div className="flex flex-col max-w-md mx-auto">
-                        <div className="ttcommon_font_bold line_hei_px_26 text-4xl">Download Our Catalog.</div>
+                        <div className="ttcommon_font_bold leading-36_26 text-4xl">Download Our Catalog.</div>
                         <p className="mt-5">Discover Intraline’s Dermal Fillers and PDO Threads. Enter your email to receive our complete product catalog.</p>
                         <div className="mt-10">
                             <input className="h-11 border-none bg-white w-full pl-5 py-2" type="text" placeholder="Your Email Address"/>
                         </div>
                         <div className="mt-10">
-                            <button className="custom_letter_space ttcommon_font_thin uppercase bg-c_00090D text-white h-11 w-full flex items-center justify-center text-sm">SUBMIT</button>
+                            <button className="ttcommon_font_thin uppercase bg-c_00090D text-white tracking-widest h-11 w-full flex items-center justify-center text-sm">SUBMIT</button>
                         </div>
                     </div>
                 </div>

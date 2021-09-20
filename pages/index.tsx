@@ -54,7 +54,7 @@ const renderCategorySwiper = () => {
         <div className="flex">
           <img className="mx-auto" src="../assets/img/product1.png" alt="" />
         </div>
-        <div className="custom_letter_space uppercase text-center text-color_1 font-bold text-2xl">DERMAL FILLERS</div>
+        <div className="uppercase text-center text-color_1 tracking-widest font-bold text-2xl">DERMAL FILLERS</div>
       </div>
     </SwiperSlide>
   })
@@ -68,7 +68,7 @@ const renderProductSwiper = () => {
         <div className="flex">
           <img className="mx-auto" src="../assets/img/product1.png" alt="" />
         </div>
-        <div className="custom_letter_space uppercase text-center text-color_1 font-bold text-2xl">DERMAL FILLERS</div>
+        <div className="uppercase text-center text-color_1 tracking-widest font-bold text-2xl">DERMAL FILLERS</div>
       </div>
     </SwiperSlide>
   })
@@ -220,7 +220,7 @@ export default function Home(
       {/* learn more part */}
       <div className="mt-20 bg-white text-center py-24 relative" style={{ height: 469 + 'px' }}>
         <div className="flex flex-col h-full">
-          <div className="line_hei_px_26 text-4xl font-bold my-auto">Intraline is Confidence.</div>
+          <div className="leading-36_26 text-4xl font-bold my-auto">Intraline is Confidence.</div>
           <p className="my-auto text-c_00080D text-4xl mx-auto max-w-lg">Our mission is to inspire confidence through safe and effective medical aesthetic products.</p>
           <button className="w-52 h-11 uppercase bg-c_00090D flex justify-center items-center text-white text-sm mx-auto my-auto">learn more</button>
         </div>
@@ -235,9 +235,9 @@ export default function Home(
       {/* Feature products part */}
       <div className="bg-c_C6CBDD py-24">
         <div className="mx-60 flex">
-          <div className="line_hei_px_26 font-bold text-4xl">Featured Products.</div>
+          <div className="leading-36_26 font-bold text-4xl">Featured Products.</div>
           <div className="flex items-center ml-auto">
-            <div className="line_hei_px_26 font-bold text-lg">See All</div>
+            <div className="leading-36_26 font-bold text-lg">See All</div>
             <div className="ml-2">
               <ChevronRight className="h-4 w-4" />
             </div>
@@ -273,7 +273,7 @@ export default function Home(
 
       {/* Reviews part */}
       <div className="py-24 bg-white">
-        <div className="line_hei_px_26 text-c_00080D font-bold text-4xl text-center">Intraline Reviews.</div>
+        <div className="leading-36_26 text-c_00080D font-bold text-4xl text-center">Intraline Reviews.</div>
         <div className="mx-auto mt-10 w-96">
           <Swiper
             className="profile-img-carousel"
@@ -313,7 +313,7 @@ export default function Home(
       <div className="bg-c_C3E0DC">
         <div className="mx-60 py-24">
           <div className="flex text-c_00080D mb-2">
-            <div className="line_hei_px_26 font-bold text-4xl">Frequently Asked Questions.</div>
+            <div className="leading-36_26 font-bold text-4xl">Frequently Asked Questions.</div>
             <div className="flex items-center ml-auto">
               <div className="font-bold text-lg">Read More</div>
               <div className="ml-2">
