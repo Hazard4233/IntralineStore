@@ -11,7 +11,6 @@ type detailsContext = {
 }
 
 export default async function getDetailsFromStory({ story, config, preview }: detailsContext) {
-    return
     let storyContent = Object.assign({}, story?.content)
     const { categories } = await getSiteInfo({ config, preview })
 

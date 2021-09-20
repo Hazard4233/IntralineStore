@@ -17,14 +17,11 @@ export async function getStaticProps({
   params,
   locale,
 }: GetStaticPropsContext<{ pages: string[] }>) {
-  return {};
   const config = getConfig({ locale })
   const { pages } = await getAllPages({ preview, config })
   const path = params?.pages.join('/')
   const slug = locale ? `${locale}/${path}` : path
-  // Hazard comment
-  // const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false))
-  const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false)) || {id: 0}
+  const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false))
   const data =
     pageItem &&
     (await getPage({ variables: { id: pageItem.id! }, config, preview }))
@@ -42,7 +39,10 @@ export async function getStaticProps({
 }
 
 export async function getStaticPaths({ locales }: GetStaticPathsContext) {
-  return
+  return {
+    paths: [],
+    fallback: false
+  };
   const { pages } = await getAllPages()
   const [invalidPaths, log] = missingLocaleInPages()
   const paths = pages

@@ -23,7 +23,8 @@ export async function getStaticProps({
 }: GetStaticPropsContext<{ slug: string }>) {
   const config = getConfig({ locale })
   let story = {}
-
+  // Hazard comment
+  return
   const { pages } = await getAllPages({ config, preview })
   const { product } = await getProduct({
     variables: { slug: params!.slug },
