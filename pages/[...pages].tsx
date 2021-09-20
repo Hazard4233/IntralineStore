@@ -17,6 +17,7 @@ export async function getStaticProps({
   params,
   locale,
 }: GetStaticPropsContext<{ pages: string[] }>) {
+  
   const config = getConfig({ locale })
   const { pages } = await getAllPages({ preview, config })
   console.log("pages=", pages)

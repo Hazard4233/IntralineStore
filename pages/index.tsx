@@ -21,28 +21,29 @@ import ChevronRight from '@components/icons/ChevronRight'
 import { ChevronUp } from '@components/icons'
 import ChevronDown from '@components/icons/ChevronDown'
 
-// export async function getStaticProps({
-//   preview,
-//   locale,
-// }: GetStaticPropsContext) {
-//   const config = getConfig({ locale })
+export async function getStaticProps({
+  preview,
+  locale,
+}: GetStaticPropsContext) {
+  return
+  const config = getConfig({ locale })
 
-//   const sbParams = {
-//     version: preview ? "draft" : "published"
-//   }
+  const sbParams = {
+    version: preview ? "draft" : "published"
+  }
 
-//   const { data: { story }} = await Storyblok.get('cdn/stories/home', sbParams)
-//   const copyOfStory = Object.assign({}, story)
-//   const fullProducts = await getDetailsFromStory({ story, config, preview })
-//   copyOfStory.content = fullProducts
+  const { data: { story }} = await Storyblok.get('cdn/stories/home', sbParams)
+  const copyOfStory = Object.assign({}, story)
+  const fullProducts = await getDetailsFromStory({ story, config, preview })
+  copyOfStory.content = fullProducts
 
-//   return {
-//     props: {
-//       story: copyOfStory,
-//     },
-//     revalidate: 14400,
-//   }
-// }
+  return {
+    props: {
+      story: copyOfStory,
+    },
+    revalidate: 14400,
+  }
+}
 
 const nonNullable = (v: any) => v
 
