@@ -80,9 +80,11 @@ const config = new Config({
 })
 
 export function getConfig(userConfig?: Partial<BigcommerceConfig>) {
+  return
   return config.getConfig(userConfig)
 }
 
 export function setConfig(newConfig: Partial<BigcommerceConfig>) {
+  return
   return config.setConfig(newConfig)
 }
