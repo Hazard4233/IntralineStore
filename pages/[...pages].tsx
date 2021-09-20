@@ -17,9 +17,9 @@ export async function getStaticProps({
   params,
   locale,
 }: GetStaticPropsContext<{ pages: string[] }>) {
+  return {};
   const config = getConfig({ locale })
   const { pages } = await getAllPages({ preview, config })
-  console.log("pages=", pages)
   const path = params?.pages.join('/')
   const slug = locale ? `${locale}/${path}` : path
 
@@ -41,6 +41,7 @@ export async function getStaticProps({
 }
 
 export async function getStaticPaths({ locales }: GetStaticPathsContext) {
+  return
   const { pages } = await getAllPages()
   const [invalidPaths, log] = missingLocaleInPages()
   const paths = pages
@@ -67,7 +68,8 @@ export default function Pages({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="max-w-2xl mx-8 sm:mx-auto py-20">
-      {page?.body && <Text html={page.body} />}
+      {/* Hazard comment */}
+      {/* {page?.body && <Text html={page.body} />} */}
     </div>
   )
 }
