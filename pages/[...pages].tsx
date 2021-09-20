@@ -22,8 +22,9 @@ export async function getStaticProps({
   const { pages } = await getAllPages({ preview, config })
   const path = params?.pages.join('/')
   const slug = locale ? `${locale}/${path}` : path
-
-  const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false))
+  // Hazard comment
+  // const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false))
+  const pageItem = pages.find((p) => (p.url ? getSlug(p.url) === slug : false)) || {id: 0}
   const data =
     pageItem &&
     (await getPage({ variables: { id: pageItem.id! }, config, preview }))
