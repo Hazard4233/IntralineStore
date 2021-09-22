@@ -69,10 +69,12 @@ module.exports = {
         c_87C1B9: '#87C1B9',
         c_F297F6: '#F297F6',
         c_D5CBA1: '#D5CBA1',
+        c_F7F7F7: '#F7F7F7',
         
       },
       fontSize: {
-        '12_5': '12.5rem'
+        '12_5': '12.5rem',
+        '120': '120px'
       },
       lineHeight: {
         'extra-loose': '2.2',

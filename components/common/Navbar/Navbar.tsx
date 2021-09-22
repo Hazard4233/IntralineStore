@@ -8,6 +8,8 @@ import throttle from 'lodash.throttle'
 import SearchSvg from '@components/icons/SearchSvg'
 import ProfileSvg from '@components/icons/ProfileSvg'
 import CartSvg from '@components/icons/CartSvg'
+import { CartSidebarView } from '@components/cart'
+import SideCart from '@components/mycp/SideCart'
 
 interface NavbarProps {
   c_name: string
@@ -47,6 +49,7 @@ const renderShopMenu = () => {
 
 const Navbar: FC<{c_name: string}> = ({c_name}) => {
   const [hasScrolled, setHasScrolled] = useState(false)
+  const [enableCart, setEnableCart] = useState(false)
   useEffect(() => {
     const handleScroll = throttle(() => {
       const offset = 0
@@ -95,7 +98,9 @@ const Navbar: FC<{c_name: string}> = ({c_name}) => {
             <div className="flex items-center ml-auto">
               <SearchSvg className={s.svg} />
               <ProfileSvg className={s.svg} />
-              <CartSvg className={s.svg} />
+              <div onClick={() => setEnableCart(!enableCart)}>
+                <CartSvg className={s.svg} />
+              </div>
             </div>
           </div>
 
@@ -113,7 +118,7 @@ const Navbar: FC<{c_name: string}> = ({c_name}) => {
         </div>
       </Container>
 
-      
+      {enableCart && <SideCart />}
     </div>
   )
 }

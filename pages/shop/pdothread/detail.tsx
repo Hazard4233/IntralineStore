@@ -116,7 +116,7 @@ export default function PDOThreadDetail() {
         <div className="ttcommon_font_thin text-c_00080D flex flex-col">
             <div className="relative bg-c_F5DBDD w-full flex flex-col" style={{height: 900 + 'px'}}>
                 <div className="flex my-auto w-full h-full z-10">
-                    <div className="w-6/12 flex flex-col mx-172">
+                    <div className="w-6/12 flex flex-col ml-172">
                         <div className="my-auto">
                             <div className="ttcommon_font_bold text-4xl leading-36_48">The Dimension</div>
                             <div className="ttcommon_font_thin text-12_5 leading-200_160 font-semibold mt-7" ><span className="ttcommon_font_bold">720</span></div>
@@ -136,7 +136,10 @@ export default function PDOThreadDetail() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-6/12 flex flex-col items-end">
+                    <div className="relative flex flex-1 flex-col items-end mr-15">
+                        <div className="absolute h-full flex flex-col">
+                            <div className="bg-white rounded-full my-auto" style={{width: 526, height: 526}}></div>
+                        </div>
                         <div className="mb-auto h-full relative flex flex-col">
                             <img className="mix_blend_multi ml-auto h-full" src="/assets/img/thread_detail.png" alt="" />
                         </div>
